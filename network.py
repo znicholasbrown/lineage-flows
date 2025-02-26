@@ -91,7 +91,7 @@ if __name__ == "__main__":
         entrypoint="network.py:k8s_network_simulation",
     ).deploy(
         name="k8s-network-simulation",
-        work_pool_name="default",
+        work_pool_name="test",
         image='prefecthq/prefect:3-latest',
         job_variables={"env": {"PREFECT_EXPERIMENTS_LINEAGE_EVENTS_ENABLED": "true"}},
     )
