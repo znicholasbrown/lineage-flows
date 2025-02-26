@@ -12,6 +12,6 @@ if __name__ == "__main__":
     ).deploy(
         name="simple",
         work_pool_name="default",
-        job_variables={}
+        job_variables={},
         image='prefecthq/prefect:3-latest'
     )
