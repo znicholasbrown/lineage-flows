@@ -92,7 +92,5 @@ if __name__ == "__main__":
     ).deploy(
         name="k8s-network-simulation",
         work_pool_name="default",
-        image="k8s-network-simulation",
-        push=False,
-        job_variables={}
+        image='prefecthq/prefect:3-latest'
     )
