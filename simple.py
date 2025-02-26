@@ -12,7 +12,5 @@ if __name__ == "__main__":
     ).deploy(
         name="simple",
         work_pool_name="default",
-        image="simple",
-        push=False,
         job_variables={}
     )
