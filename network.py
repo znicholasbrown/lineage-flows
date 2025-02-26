@@ -92,5 +92,6 @@ if __name__ == "__main__":
     ).deploy(
         name="k8s-network-simulation",
         work_pool_name="default",
-        image='prefecthq/prefect:3-latest'
+        image='prefecthq/prefect:3-latest',
+        job_variables={"env": {"PREFECT_EXPERIMENTS_LINEAGE_EVENTS_ENABLED": "true"}},
     )
