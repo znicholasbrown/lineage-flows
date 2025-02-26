@@ -1,24 +1,9 @@
-from prefect import flow
-from prefect._experimental.lineage import emit_external_resource_lineage
+from prefect import flow, get_run_logger
 
 @flow(name="simple")
 async def simple():
-   await emit_external_resource_lineage(
-        upstream_resources=[
-            {
-                "prefect.resource.id": "api://simple",
-                "prefect.resource.role": "api",
-                "prefect.resource.name": "Simple API"
-            }
-        ],
-        downstream_resources=[
-           {
-                "prefect.resource.id": "app://simple",
-                "prefect.resource.role": "application",
-                "prefect.resource.name": "Simple App"
-            }
-        ]
-    )
+    logger = get_run_logger()
+    logger.info("This is a simple test of managed execution.")
 
 if __name__ == "__main__":  
     simple.from_source(
