@@ -13,4 +13,5 @@ if __name__ == "__main__":
         name="simple",
         work_pool_name="default",
         job_variables={}
+        image='prefecthq/prefect:3-latest'
     )
