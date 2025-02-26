@@ -94,4 +94,5 @@ if __name__ == "__main__":
         work_pool_name="default",
         image="k8s-network-simulation",
         push=False,
+        job_variables={}
     )
